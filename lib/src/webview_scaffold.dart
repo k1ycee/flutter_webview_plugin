@@ -41,6 +41,7 @@ class WebviewScaffold extends StatefulWidget {
     this.geolocationEnabled,
     this.debuggingEnabled = false,
     this.ignoreSSLErrors = false,
+    this.floatingActionButton,
   }) : super(key: key);
 
   final PreferredSizeWidget appBar;
@@ -74,6 +75,7 @@ class WebviewScaffold extends StatefulWidget {
   final bool useWideViewPort;
   final bool debuggingEnabled;
   final bool ignoreSSLErrors;
+  final FloatingActionButton floatingActionButton;
 
   @override
   _WebviewScaffoldState createState() => _WebviewScaffoldState();
@@ -145,6 +147,7 @@ class _WebviewScaffoldState extends State<WebviewScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: widget.floatingActionButton,
       appBar: widget.appBar,
       resizeToAvoidBottomInset: widget.resizeToAvoidBottomInset,
       persistentFooterButtons: widget.persistentFooterButtons,
